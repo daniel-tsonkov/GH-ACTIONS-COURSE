@@ -12,4 +12,10 @@ jobs:
                 STEP_VAR: 'This is a step variable'
               run: |
                 echo "Step env var: ${{ env.STEP_VAR }}"
+    echo2:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Print Job Variables
+              run: |
+                echo "Job env var: ${{ vars.ORG_VAR }}"
     
